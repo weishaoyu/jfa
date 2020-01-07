@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据分页</title>
+    <style>
+        .block {
+            position: relative;
+            margin: 0 auto;
+            width: 1190px;
+            border: 1px solid silver;
+        }
+        
+        .title ul {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: linear-gradient(#b5faff, deepskyblue);
+            position: relative;
+        }
+        
+        .title li {
+            list-style: none;
+            float: left;
+            width: 119px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        #content {
+            width: 1190px;
+            position: relative;
+        }
+        
+        .user-data ul {
+            background: transparent !important;
+            border-bottom: 1px solid silver;
+        }
+        
+        .user-data ul li {
+            height: 30px !important;
+            line-height: 30px !important;
+            font-size: 13px;
+        }
+        
+        .buttonNumber {
+            overflow: hidden;
+            padding: 15px 20px
+        }
+        
+        .totle {
+            display: block;
+            float: left;
+            width: 60px;
+            height: 30px;
+            border: 1px solid #f3f3f3;
+            text-align: center;
+            line-height: 30px;
+            font-size: 13px;
+        }
+        
+        .topPage,
+        .downPage {
+            width: 70px;
+            height: 30px;
+            outline: none;
+            border: 1px solid #f3f3f3;
+            float: left;
+            margin: 0 5px;
+            font-size: 13px;
+            background-color: transparent;
+        }
+        
+        .btnNumber {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            float: left;
+        }
+        
+        .btnNumber>li {
+            list-style: none;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            margin: 0 2px;
+            border: 1px solid #f3f3f3;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        
+        .gopage span {
+            display: block;
+            float: left;
+            font-size: 13px;
+            line-height: 30px;
+            width: 40px;
+            height: 30px;
+            border: 1px solid #f3f3f3;
+            text-align: center;
+        }
+        
+        .txtnum {
+            float: left;
+            width: 30px;
+            height: 28px;
+            outline: none;
+            border: 1px solid #f3f3f3;
+            text-align: center;
+        }
+        
+        .gopage button {
+            width: 70px;
+            height: 30px;
+            outline: none;
+            border: 1px solid #f3f3f3;
+            float: left;
+            margin: 0 10px;
+            font-size: 13px;
+            background-color: transparent;
+        }
+        
+        #userover {
+            background-color: #fdeaff;
+            color: #00aaff;
+        }
+        
+        #userleave {
+            background-color: transparent;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="block">
+        <div class="title">
+            <ul>
+                <li>序号</li>
+                <li>姓名</li>
+                <li>性别</li>
+                <li>年龄</li>
+                <li>地址</li>
+                <li>电话</li>
+                <li>QQ</li>
+                <li>Email</li>
+                <li>毕业 (是/否)</li>
+                <li>结婚 (是/否)</li>
+            </ul>
+        </div>
+        <div id="content">
+
+        </div>
+        <div class="buttonNumber">
+            <span class="totle">共<span>0</span>页</span>
+            <button class="topPage">上一页</button>
+            <ul class="btnNumber">
+            </ul>
+            <button class="downPage">下一页</button>
+            <div class="gopage">
+                <span>到第</span>
+                <input class="txtnum" value="1" type="text" />
+                <span>页</span>
+                <button id="choose">确定</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="data.js"></script>
+<script src="fen.js"></script>
+
+</html>
